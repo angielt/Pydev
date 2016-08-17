@@ -71,8 +71,9 @@ public class PyCompletionProposal implements ICompletionProposal, IPyCompletionP
      * @param cursorPosition the position of the cursor following the insert relative to replacementOffset
      */
     public PyCompletionProposal(String replacementString, int replacementOffset, int replacementLength,
-            int cursorPosition, int priority) {
-        this(replacementString, replacementOffset, replacementLength, cursorPosition, null, null, null, null, priority);
+            int cursorPosition, String additionalProposalInfo, int priority) {
+        this(replacementString, replacementOffset, replacementLength, cursorPosition, null, null, null,
+                additionalProposalInfo, priority);
     }
 
     public PyCompletionProposal(String replacementString, int replacementOffset, int replacementLength,
